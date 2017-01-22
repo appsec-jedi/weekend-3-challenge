@@ -4,42 +4,52 @@
   border: 3px solid #000000;
   font-size: 20px;
   text-align: center;
-  margin: auto;
+  margin: auto auto 10px auto;
+  background-color: #d1d1d1;
 }
-#calculator2{
+.calculator2{
   width: 325px;
   margin: auto;
   border: 3px solid #000000;
+  background-color: #e02222;
 }
-#functionButton {
+/*#functionButton {
   width: 275px;
   margin: auto;
   border: 2px solid #0029ff;
-}
+}*/
 .functionButton{
   display: inline-block;
   border: 1px solid #000000;
-  height: 20px;
+  height: 40px;
   width: 100px;
   margin: auto 10px auto;
   text-align: center;
 }
 .numberButton {
-  border: 1px solid #000000;
-  height: 20px;
+  height: 60px;
   width: 80px;
   text-align: center;
   display: inline-block;
-  margin: auto;
+  margin: 5px auto;
+  border: 1px solid #000000;
 }
 #equals {
-  border: 1px solid #000000;
-  height: 20px;
-  width: 164px;
+  height: 60px;
+  width: 80px;
   text-align: center;
   display: inline-block;
-  margin: auto;
+  margin: 5px auto;
+  border: 1px solid #000000;
 }
-h1 {
+/*h1 {
   text-align: center;
+}*/
+#clear {
+  height: 60px;
+  width: 80px;
+  text-align: center;
+  display: inline-block;
+  margin: 5px auto;
+  border: 1px solid #000000;
 }
