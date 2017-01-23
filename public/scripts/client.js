@@ -10,12 +10,12 @@ $(function(){
   $('.numberButton').on('click', function() {
     if (operatorHasBeenUsed == false ){
       x=$(this).attr('id');
-      x=Number(x);
+      // x=Number(x).toFixed(2);
       console.log(x, " clicked");
       $('#container').html('<div>' + x + '</div>');
     } else {
       y=$(this).attr('id');
-      x=Number(x);
+      // y=Number(y);
       console.log(x, " clicked");
       $('#container').empty();
       $('#container').html('<div>' + y + '</div>');
@@ -33,38 +33,15 @@ $(function(){
     console.log(equals, " clicked");
     operatorHasBeenUsed = false;
     event.preventDefault();
-    // var x = $('#x').val();
-    // var y = $('#y').val();
-    // var math = $(this).attr('id');
     var mathInputs = {X:x, Y:y, z:math};
-    // $('form').find('input[type=number]').val('');
 
     $.ajax({
       url: '/mathFunction/' + math,
       type: 'POST',
       data: mathInputs,
-      // success: mathResult()
       success: appendMath
      });
   })
-
-
-  // $('.button').on('click', function() {
-  //   event.preventDefault();
-  //   var x = $('#x').val();
-  //   var y = $('#y').val();
-  //   var math = $(this).attr('id');
-  //   var mathInputs = {X:x, Y:y, z:math};
-  //   $('form').find('input[type=number]').val('');
-  //
-  //   $.ajax({
-  //     url: '/mathFunction/' + math,
-  //     type: 'POST',
-  //     data: mathInputs,
-  //     // success: mathResult()
-  //     success: appendMath
-  //    });
-  // })
 
   $('#clear').on('click', function() {
     $('#container').empty();
